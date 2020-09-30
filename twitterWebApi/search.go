@@ -2,7 +2,6 @@ package twitterWebApi
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"net/url"
 )
@@ -43,7 +42,6 @@ func (core Core) Search(keyword string,values url.Values)(*SearchJson,error){
 		values = url.Values{}
 	}
 	values.Add("q",keyword)
-	fmt.Println("https://api.twitter.com/2/search/adaptive.json?" + values.Encode())
 	req,err := core.createRequest(http.MethodGet,"https://api.twitter.com/2/search/adaptive.json?" + values.Encode(),nil)
 	if err != nil{
 		return nil,err

@@ -39,3 +39,6 @@ func main() {
 }
 
 ```
+
+### Message
+Don't you think Twitter's API should issue an API key without any research?
